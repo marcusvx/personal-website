@@ -7,7 +7,7 @@ export default function About() {
         </svg>
       ),
       title: "15+ Years Experience",
-      description: "Proven track record in software development and technical leadership."
+      description: "Extensive experience in the entire product development lifecycle, from concept to launch."
     },
     {
       icon: (
@@ -15,8 +15,8 @@ export default function About() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
-      title: "Team Leadership",
-      description: "Led cross-functional teams and mentored developers across multiple projects."
+      title: "Technical Leadership",
+      description: "Experience as technical leader, guiding architectural decisions and fostering knowledge-sharing within teams."
     },
     {
       icon: (
@@ -24,8 +24,17 @@ export default function About() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      title: "Modern Tech Stack",
-      description: "Expert in cutting-edge technologies including React, TypeScript, and cloud platforms."
+      title: "Full-Stack Expertise",
+      description: "Proficient in .NET Core, Java, Node.js, TypeScript, GraphQL, Angular, React, and cloud technologies."
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      ),
+      title: "Clean Code Advocate",
+      description: "Passionate about writing clean code, adhering to SOLID principles, and practicing Test-Driven Development."
     }
   ];
 
@@ -37,7 +46,7 @@ export default function About() {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Passionate about creating innovative solutions and building exceptional digital experiences
+            A seasoned software professional from São Paulo, Brazil, dedicated to creating innovative solutions and excellence in software development
           </p>
         </div>
 
@@ -48,7 +57,7 @@ export default function About() {
               <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
                   src="/assets/photo.jpg" 
-                  alt="Marcus Ximenes" 
+                  alt="Marcus Vinicius Ximenes" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -63,30 +72,36 @@ export default function About() {
           {/* Content */}
           <div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-              Building the Future, One Line of Code at a Time
+              Building Innovative Solutions Through Clean Code
             </h3>
             <div className="space-y-4 text-gray-600 dark:text-gray-300">
               <p>
-                I'm Marcus, a seasoned software developer from São Paulo, Brazil, with a passion for creating 
-                robust, scalable solutions that make a real difference. Over the past 15+ years, I've had the 
-                privilege of working with cutting-edge technologies and leading talented teams.
+                I'm Marcus Vinicius, a Staff Software Engineer from São Paulo, Brazil, with over 15 years of 
+                experience in software development. I'm passionate about writing clean code, adhering to SOLID 
+                principles, and practicing Test-Driven Development (TDD).
               </p>
               <p>
-                My journey spans from early .NET development to modern cloud-native applications using React, 
-                TypeScript, and microservices architectures. I believe in writing clean, maintainable code 
-                and following best practices like TDD and SOLID principles.
+                My expertise spans a variety of technologies, including .NET Core, Java, Node.js, TypeScript, 
+                GraphQL, Angular (4+), React, and vanilla JavaScript. I have extensive experience working with 
+                microservices architectures, cloud platforms, and modern development practices.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies, mentoring fellow developers, 
-                or enjoying time with my family. I'm also a music enthusiast and love playing drums in my 
-                spare time.
+                Throughout my career, I've had the privilege of working with leading companies like Gupy, GRIN, 
+                The Luupe, and ThoughtWorks, where I've contributed to digital banking solutions, creator platforms, 
+                and various innovative projects. I also have experience as a technical leader, guiding architectural 
+                decisions and fostering knowledge-sharing within development teams.
+              </p>
+              <p>
+                I'm fluent in Portuguese (native), English (full professional proficiency), and have limited working 
+                proficiency in Spanish. I hold certifications in Microsoft .NET Framework and as a Triplebyte 
+                Certified JavaScript Engineer.
               </p>
             </div>
           </div>
         </div>
 
         {/* Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {highlights.map((highlight, index) => (
             <div 
               key={index}

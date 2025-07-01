@@ -33,6 +33,7 @@ export default function Contact() {
       value: "marcus@marcusvinicius.info",
       link: "mailto:marcus@marcusvinicius.info"
     },
+
     {
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -40,8 +41,8 @@ export default function Contact() {
         </svg>
       ),
       title: "LinkedIn",
-      value: "/in/marcusvinicius",
-      link: "https://linkedin.com/in/marcusvinicius"
+      value: "/in/marcusvx",
+      link: "https://linkedin.com/in/marcusvx"
     },
     {
       icon: (
@@ -52,6 +53,17 @@ export default function Contact() {
       title: "GitHub",
       value: "/marcusvinicius",
       link: "https://github.com/marcusvinicius"
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 128 128">
+          <path d="M101.991,52.29L73.278,10.538l-8.994,6.08l28.714,41.751L101.991,52.29z M91.228,59.85L47.332,34.177L41.8,43.471l43.898,25.674L91.228,59.85z M84.803,72.195L35.589,59.077l-2.828,10.422l49.217,13.12L84.803,72.195z M81.455,86.279l-50.746-4.636l-0.999,10.749l50.747,4.632L81.455,86.279z M114.667,49.789L105.949,0L95.223,1.845l8.717,49.789L114.667,49.789z M80.229,110.913l-50.964,0.024l-0.004-10.793l50.962-0.026L80.229,110.913z"/>
+          <polygon points="88.884,75.409 88.884,119.532 22.04,119.532 22.04,75.409 13.333,75.409 13.333,128 97.547,128 97.547,75.409"/>
+        </svg>
+      ),
+      title: "Stack Overflow",
+      value: "/marcusvinicius",
+      link: "https://stackoverflow.com/users/1720847/marcusvinicius"
     }
   ];
 
