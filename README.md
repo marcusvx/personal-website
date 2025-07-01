@@ -1,6 +1,6 @@
 # Marcus Vinicius - Personal Website
 
-A modern, responsive personal website and portfolio built with Astro, React, and Tailwind CSS. Showcasing 18+ years of software development experience, technical skills, and professional achievements.
+A modern, responsive personal website and portfolio built with Astro, React, and Tailwind CSS. Showcasing 16+ years of software development experience, technical skills, and professional achievements.
 
 🌐 **Live Site**: [marcusvinicius.info](https://marcusvinicius.info)
 
