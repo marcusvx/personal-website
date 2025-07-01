@@ -7,7 +7,7 @@ export default function Hero() {
     setIsVisible(true);
   }, []);
 
-  const roles = ['Software Developer', 'Tech Lead', 'Problem Solver'];
+  const roles = ['Staff Software Engineer', 'Technical Leader', 'Full-Stack Developer', 'Problem Solver'];
   const [currentRole, setCurrentRole] = useState(0);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function Hero() {
             <div className="mb-6">
               <p className="text-blue-600 dark:text-blue-400 font-medium text-lg mb-2">Hello, I'm</p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-                Marcus Ximenes
+                Marcus Vinicius Ximenes
               </h1>
               <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
                 <span>I'm a </span>
@@ -46,8 +46,8 @@ export default function Hero() {
             </div>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">
-              With over 15 years of experience in software development, I create robust, scalable solutions 
-              and lead teams to deliver exceptional digital experiences.
+              A seasoned software developer with over 15 years of experience, well-versed in the entire product 
+              development lifecycle, from concept to launch. Passionate about clean code, SOLID principles, and Test-Driven Development.
             </p>
 
             {/* CTA Buttons */}
@@ -86,7 +86,7 @@ export default function Hero() {
               </a>
               
               <a
-                href="https://linkedin.com/in/marcusvinicius"
+                href="https://linkedin.com/in/marcusvx"
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transform hover:scale-110 transition-all duration-200"
                 aria-label="LinkedIn"
               >
@@ -95,13 +95,15 @@ export default function Hero() {
                 </svg>
               </a>
               
+
               <a
-                href="mailto:marcus@marcusvinicius.info"
+                href="https://stackoverflow.com/users/1720847/marcusvinicius"
                 className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transform hover:scale-110 transition-all duration-200"
-                aria-label="Email"
+                aria-label="Stack Overflow"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 128 128">
+                  <path d="M101.991,52.29L73.278,10.538l-8.994,6.08l28.714,41.751L101.991,52.29z M91.228,59.85L47.332,34.177L41.8,43.471l43.898,25.674L91.228,59.85z M84.803,72.195L35.589,59.077l-2.828,10.422l49.217,13.12L84.803,72.195z M81.455,86.279l-50.746-4.636l-0.999,10.749l50.747,4.632L81.455,86.279z M114.667,49.789L105.949,0L95.223,1.845l8.717,49.789L114.667,49.789z M80.229,110.913l-50.964,0.024l-0.004-10.793l50.962-0.026L80.229,110.913z"/>
+                  <polygon points="88.884,75.409 88.884,119.532 22.04,119.532 22.04,75.409 13.333,75.409 13.333,128 97.547,128 97.547,75.409"/>
                 </svg>
               </a>
             </div>
