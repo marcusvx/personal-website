@@ -42,12 +42,13 @@ const {
       // Initialize theme before page loads to prevent flash
       (function() {
         const savedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         
-        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-          document.documentElement.classList.add('dark');
-        } else {
+        // Default to dark theme if no preference is saved
+        if (savedTheme === 'light') {
           document.documentElement.classList.remove('dark');
+        } else {
+          // Default to dark (covers savedTheme === 'dark' and !savedTheme cases)
+          document.documentElement.classList.add('dark');
         }
       })();
     </script>
@@ -58,10 +59,16 @@ const {
     
     <!-- Theme toggle functionality -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      function initThemeToggle() {
         const themeToggle = document.getElementById('theme-toggle');
         const lightIcon = document.getElementById('theme-toggle-light-icon');
         const darkIcon = document.getElementById('theme-toggle-dark-icon');
+
+        // Check if elements exist (they might not be ready yet)
+        if (!themeToggle || !lightIcon || !darkIcon) {
+          setTimeout(initThemeToggle, 100);
+          return;
+        }
 
         function updateThemeIcons() {
           const isDark = document.documentElement.classList.contains('dark');
@@ -92,22 +99,25 @@ const {
         updateThemeIcons();
 
         // Add click event listener
-        if (themeToggle) {
-          themeToggle.addEventListener('click', toggleTheme);
-        }
+        themeToggle.addEventListener('click', toggleTheme);
 
-        // Listen for system theme changes
+        // Listen for system theme changes (only if user hasn't set a preference)
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-          if (!localStorage.getItem('theme')) {
-            if (e.matches) {
-              document.documentElement.classList.add('dark');
-            } else {
-              document.documentElement.classList.remove('dark');
-            }
+          const savedTheme = localStorage.getItem('theme');
+          if (!savedTheme) {
+            // Keep default dark theme even when system changes, unless user explicitly chose light
+            document.documentElement.classList.add('dark');
             updateThemeIcons();
           }
         });
-      });
+      }
+
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initThemeToggle);
+      } else {
+        initThemeToggle();
+      }
     </script>
   </body>
 </html>
