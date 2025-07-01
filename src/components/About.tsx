@@ -93,8 +93,7 @@ export default function About() {
               </p>
               <p>
                 I'm fluent in Portuguese (native), English (full professional proficiency), and have limited working 
-                proficiency in Spanish. I hold certifications in Microsoft .NET Framework and as a Triplebyte 
-                Certified JavaScript Engineer.
+                proficiency in Spanish. I hold certifications in Microsoft .NET Framework.
               </p>
             </div>
           </div>
