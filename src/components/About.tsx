@@ -39,29 +39,31 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="about" className="py-20 bg-brutal-bg border-t-3 border-brutal-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="mb-16">
+          <h2 className="text-5xl md:text-6xl font-titulos text-brutal-text uppercase mb-4 tracking-tighter">
             About Me
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-brutal-text leading-relaxed max-w-prose">
             A seasoned software professional from São Paulo, Brazil, dedicated to creating innovative solutions and excellence in software development
           </p>
         </div>
+
+        <hr className="border-t-3 border-brutal-border my-12" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative">
-              <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/assets/photo.jpg" 
-                  alt="Marcus Vinicius Ximenes" 
+              <div className="w-80 h-80 border-3 border-brutal-border overflow-hidden">
+                <img
+                  src="/assets/photo.jpg"
+                  alt="Marcus Vinicius Ximenes"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-600 rounded-2xl flex items-center justify-center">
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-brutal-accent border-3 border-brutal-border flex items-center justify-center">
                 <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
@@ -71,28 +73,28 @@ export default function About() {
 
           {/* Content */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            <h3 className="text-3xl font-titulos text-brutal-text uppercase mb-6 tracking-tight">
               Building Innovative Solutions Through Clean Code
             </h3>
-            <div className="space-y-4 text-gray-600 dark:text-gray-300">
+            <div className="space-y-4 text-brutal-text leading-relaxed">
               <p>
-                I'm Marcus Vinicius, a Staff Software Engineer from São Paulo, Brazil, with over 15 years of 
-                experience in software development. I'm passionate about writing clean code, adhering to SOLID 
+                I'm Marcus Vinicius, a Staff Software Engineer from São Paulo, Brazil, with over 15 years of
+                experience in software development. I'm passionate about writing clean code, adhering to SOLID
                 principles, and practicing Test-Driven Development (TDD).
               </p>
               <p>
-                My expertise spans a variety of technologies, including .NET Core, Java, Node.js, TypeScript, 
-                GraphQL, Angular (4+), React, and vanilla JavaScript. I have extensive experience working with 
+                My expertise spans a variety of technologies, including .NET Core, Java, Node.js, TypeScript,
+                GraphQL, Angular (4+), React, and vanilla JavaScript. I have extensive experience working with
                 microservices architectures, cloud platforms, and modern development practices.
               </p>
               <p>
-                Throughout my career, I've had the privilege of working with leading companies like Gupy, GRIN, 
-                The Luupe, and ThoughtWorks, where I've contributed to digital banking solutions, creator platforms, 
-                and various innovative projects. I also have experience as a technical leader, guiding architectural 
+                Throughout my career, I've had the privilege of working with leading companies like Gupy, GRIN,
+                The Luupe, and ThoughtWorks, where I've contributed to digital banking solutions, creator platforms,
+                and various innovative projects. I also have experience as a technical leader, guiding architectural
                 decisions and fostering knowledge-sharing within development teams.
               </p>
               <p>
-                I'm fluent in Portuguese (native), English (full professional proficiency), and have limited working 
+                I'm fluent in Portuguese (native), English (full professional proficiency), and have limited working
                 proficiency in Spanish. I hold certifications in Microsoft .NET Framework.
               </p>
             </div>
@@ -100,19 +102,20 @@ export default function About() {
         </div>
 
         {/* Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <hr className="border-t-3 border-brutal-border my-12" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-l-3 border-r-3 border-brutal-border">
           {highlights.map((highlight, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="border-b-3 border-r-3 border-brutal-border p-8 bg-white last:border-r-0"
             >
-              <div className="text-blue-600 dark:text-blue-400 mb-4">
+              <div className="text-brutal-accent mb-4">
                 {highlight.icon}
               </div>
-              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              <h4 className="text-lg font-titulos text-brutal-text uppercase mb-3 tracking-tight">
                 {highlight.title}
               </h4>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-brutal-text">
                 {highlight.description}
               </p>
             </div>
@@ -121,4 +124,4 @@ export default function About() {
       </div>
     </section>
   );
-} 
+}
