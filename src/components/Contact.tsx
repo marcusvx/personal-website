@@ -79,8 +79,6 @@ export default function Contact() {
           </p>
         </div>
 
-        <hr className="border-t-3 border-brutal-border my-12" />
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="border-3 border-brutal-border p-8 bg-white rounded-none">
