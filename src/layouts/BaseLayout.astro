@@ -4,28 +4,32 @@ export interface Props {
   description?: string;
 }
 
-const { 
-  title = 'Marcus Ximenes - Software Developer', 
-  description = 'Personal website and portfolio of Marcus Ximenes, a software developer with 15+ years of experience.' 
+const {
+  title = "Marcus Ximenes - Software Developer",
+  description = "Personal website and portfolio of Marcus Ximenes, a software developer with 15+ years of experience.",
 } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
@@ -35,34 +39,39 @@ const {
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Theme initialization script -->
     <script>
       // Initialize theme before page loads to prevent flash
-      (function() {
-        const savedTheme = localStorage.getItem('theme');
-        
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+
         // Default to dark theme if no preference is saved
-        if (savedTheme === 'light') {
-          document.documentElement.classList.remove('dark');
+        if (savedTheme === "light") {
+          document.documentElement.classList.remove("dark");
         } else {
           // Default to dark (covers savedTheme === 'dark' and !savedTheme cases)
-          document.documentElement.classList.add('dark');
+          document.documentElement.classList.add("dark");
         }
       })();
     </script>
   </head>
-  
-  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased">
+
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased"
+  >
     <slot />
-    
+
     <!-- Theme toggle functionality -->
     <script>
       function initThemeToggle() {
-        const themeToggle = document.getElementById('theme-toggle');
-        const lightIcon = document.getElementById('theme-toggle-light-icon');
-        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggle = document.getElementById("theme-toggle");
+        const lightIcon = document.getElementById("theme-toggle-light-icon");
+        const darkIcon = document.getElementById("theme-toggle-dark-icon");
 
         // Check if elements exist (they might not be ready yet)
         if (!themeToggle || !lightIcon || !darkIcon) {
@@ -71,27 +80,27 @@ const {
         }
 
         function updateThemeIcons() {
-          const isDark = document.documentElement.classList.contains('dark');
+          const isDark = document.documentElement.classList.contains("dark");
           if (isDark) {
-            lightIcon.classList.remove('hidden');
-            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove("hidden");
+            darkIcon.classList.add("hidden");
           } else {
-            lightIcon.classList.add('hidden');
-            darkIcon.classList.remove('hidden');
+            lightIcon.classList.add("hidden");
+            darkIcon.classList.remove("hidden");
           }
         }
 
         function toggleTheme() {
-          const isDark = document.documentElement.classList.contains('dark');
-          
+          const isDark = document.documentElement.classList.contains("dark");
+
           if (isDark) {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("theme", "light");
           } else {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
           }
-          
+
           updateThemeIcons();
         }
 
@@ -99,22 +108,24 @@ const {
         updateThemeIcons();
 
         // Add click event listener
-        themeToggle.addEventListener('click', toggleTheme);
+        themeToggle.addEventListener("click", toggleTheme);
 
         // Listen for system theme changes (only if user hasn't set a preference)
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-          const savedTheme = localStorage.getItem('theme');
-          if (!savedTheme) {
-            // Keep default dark theme even when system changes, unless user explicitly chose light
-            document.documentElement.classList.add('dark');
-            updateThemeIcons();
-          }
-        });
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", function (e) {
+            const savedTheme = localStorage.getItem("theme");
+            if (!savedTheme) {
+              // Keep default dark theme even when system changes, unless user explicitly chose light
+              document.documentElement.classList.add("dark");
+              updateThemeIcons();
+            }
+          });
       }
 
       // Initialize when DOM is ready
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initThemeToggle);
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initThemeToggle);
       } else {
         initThemeToggle();
       }
@@ -124,43 +135,44 @@ const {
 
 <style is:global>
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
   }
-  
+
   code {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: "JetBrains Mono", monospace;
   }
-  
+
   /* Dark mode */
   @media (prefers-color-scheme: dark) {
     html {
       color-scheme: dark;
     }
   }
-  
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
   }
-  
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background: rgb(156 163 175);
     border-radius: 3px;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(107 114 128);
   }
-  
+
   .dark ::-webkit-scrollbar-thumb {
     background: rgb(75 85 99);
   }
-  
+
   .dark ::-webkit-scrollbar-thumb:hover {
     background: rgb(107 114 128);
   }
-</style> 
+</style>
+

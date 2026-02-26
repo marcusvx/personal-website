@@ -1,0 +1,26 @@
+# Marcus Ximenes
+
+> Software Developer & Tech Leader passionate about creating innovative solutions and mentoring the next generation of developers.
+
+Marcus Vinicius Ximenes is a Staff Software Engineer currently working at Gupy.
+
+## Contact & Links
+- Website: https://marcusvinicius.info
+- GitHub: https://github.com/marcusvinicius
+- LinkedIn: https://linkedin.com/in/marcusvx
+- Email: marcus@marcusvinicius.info
+
+## Technical Skills
+Kotlin, TypeScript, Java, .NET Core, Node.js, React, Angular, GraphQL, JavaScript, C#, AWS, Docker, DevOps, Microservices, TDD, SOLID
+
+## Experience Highlights
+- **Staff Software Engineer at Gupy** (May 2024 - Present)
+- **Staff Software Engineer at GRIN** (Dec 2023 - May 2024)
+- **Senior Software Engineer at The Luupe** (Apr 2022 - Present)
+- **Lead Software Developer/Consultant at ThoughtWorks** (Feb 2019 - Apr 2022)
+- **Solutions Architect at Itaú Unibanco** (Nov 2018 - Feb 2019)
+
+## Featured Projects
+- **Digital Banking Platform**: Scalable microservices architecture for digital banking solutions, focusing on credit card services and backend systems. (Technologies: Kotlin, Microservices, AWS, Docker)
+- **Creator Platform**: Global online platform connecting women and non-binary photographers with brands for diverse content creation. (Technologies: React, TypeScript, Node.js, Cloud)
+- **Labor Compliance Platform**: Platform helping businesses monitor employee breaks and prevent violations, with real-time dashboards and mobile apps. (Technologies: .NET Core, WebAPI, Ionic, Node.js)
