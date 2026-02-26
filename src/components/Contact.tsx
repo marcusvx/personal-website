@@ -68,27 +68,29 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+    <section id="contact" className="py-20 bg-brutal-bg border-t-3 border-brutal-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="mb-16">
+          <h2 className="text-5xl md:text-6xl font-titulos text-brutal-text uppercase mb-4 tracking-tighter">
             Let's Work Together
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-brutal-text leading-relaxed max-w-prose">
             Have a project in mind or just want to say hello? I'd love to hear from you.
           </p>
         </div>
 
+        <hr className="border-t-3 border-brutal-border my-12" />
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="border-3 border-brutal-border p-8 bg-white rounded-none">
+            <h3 className="text-2xl font-titulos text-brutal-text uppercase mb-6 tracking-tight">
               Send a Message
             </h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="name" className="block text-sm font-bold text-brutal-text uppercase mb-2">
                   Your Name
                 </label>
                 <input
@@ -98,13 +100,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border-2 border-brutal-border bg-white text-brutal-text focus:outline-none focus:border-brutal-accent"
                   placeholder="John Doe"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-bold text-brutal-text uppercase mb-2">
                   Email Address
                 </label>
                 <input
@@ -114,13 +116,13 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-3 border-2 border-brutal-border bg-white text-brutal-text focus:outline-none focus:border-brutal-accent"
                   placeholder="john@example.com"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-bold text-brutal-text uppercase mb-2">
                   Message
                 </label>
                 <textarea
@@ -130,14 +132,14 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white resize-none"
+                  className="w-full px-4 py-3 border-2 border-brutal-border bg-white text-brutal-text focus:outline-none focus:border-brutal-accent resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
-              
+
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="w-full bg-brutal-accent text-white font-titulos py-3 px-6 uppercase hover:bg-brutal-text transition-all duration-200"
               >
                 Send Message
               </button>
@@ -147,11 +149,11 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              <h3 className="text-2xl font-titulos text-brutal-text uppercase mb-6 tracking-tight">
                 Get in Touch
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, interesting projects, 
+              <p className="text-brutal-text text-lg leading-relaxed mb-8">
+                I'm always open to discussing new opportunities, interesting projects,
                 or just having a chat about technology and development. Feel free to reach out!
               </p>
             </div>
@@ -163,16 +165,16 @@ export default function Contact() {
                   href={info.link}
                   target={info.link.startsWith('http') ? '_blank' : undefined}
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 group"
+                  className="flex items-center space-x-4 p-4 border-2 border-brutal-border bg-white hover:bg-brutal-accent hover:text-white transition-colors duration-200 group"
                 >
-                  <div className="text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-200">
+                  <div className="text-brutal-text group-hover:text-white">
                     {info.icon}
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900 dark:text-white">
+                    <p className="font-bold text-brutal-text group-hover:text-white uppercase text-sm">
                       {info.title}
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-brutal-text group-hover:text-white">
                       {info.value}
                     </p>
                   </div>
@@ -184,4 +186,4 @@ export default function Contact() {
       </div>
     </section>
   );
-} 
+}

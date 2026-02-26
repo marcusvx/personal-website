@@ -13,21 +13,21 @@ import Contact from '../components/Contact';
 		<About client:load />
 		
 		<!-- Skills Section -->
-		<section id="skills" class="py-20 bg-white dark:bg-gray-900">
+		<section id="skills" class="py-20 bg-brutal-bg border-t-3 border-brutal-border">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+				<div class="mb-16">
+					<h2 class="text-5xl md:text-6xl font-sans font-titulos tracking-tighter text-brutal-text uppercase mb-4">
 						Technical Skills
 					</h2>
-					<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+					<p class="text-lg text-brutal-text leading-relaxed max-w-prose">
 						Technologies and tools I work with to bring ideas to life
 					</p>
 				</div>
 				
-				<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+				<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-0 border-l-3 border-r-3 border-brutal-border">
 					{['Kotlin', 'TypeScript', 'Java', '.NET Core', 'Node.js', 'React', 'Angular', 'GraphQL', 'JavaScript', 'C#', 'AWS', 'Docker', 'DevOps', 'Microservices', 'TDD', 'SOLID'].map((skill) => (
-						<div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl text-center hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-							<div class="text-lg font-bold text-gray-900 dark:text-white">{skill}</div>
+						<div class="border-b-3 border-r-3 border-brutal-border p-6 text-center bg-white last:border-r-0">
+							<div class="text-base font-titulos text-brutal-text uppercase tracking-tight">{skill}</div>
 						</div>
 					))}
 				</div>
@@ -35,92 +35,94 @@ import Contact from '../components/Contact';
 		</section>
 
 		<!-- Experience Section -->
-		<section id="experience" class="py-20 bg-gray-50 dark:bg-gray-800">
+		<section id="experience" class="py-20 bg-brutal-bg border-t-3 border-brutal-border">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+				<div class="mb-16">
+					<h2 class="text-5xl md:text-6xl font-sans font-titulos tracking-tighter text-brutal-text uppercase mb-4">
 						Professional Experience
 					</h2>
-					<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+					<p class="text-lg text-brutal-text leading-relaxed max-w-prose">
 						A journey through my career highlights and key achievements
 					</p>
 				</div>
 				
+				<hr class="border-t-3 border-brutal-border my-12" />
+				
 				<div class="space-y-8">
-					<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+					<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 						<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 							<div>
-								<h3 class="text-xl font-bold text-gray-900 dark:text-white">Staff Software Engineer</h3>
-								<p class="text-blue-600 dark:text-blue-400 font-medium">Gupy</p>
+								<h3 class="text-2xl font-titulos text-brutal-text uppercase">Staff Software Engineer</h3>
+								<p class="text-brutal-accent font-bold">Gupy</p>
 							</div>
-							<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">May 2024 - Present</span>
+							<span class="text-brutal-text font-bold mt-2 md:mt-0">May 2024 - Present</span>
 						</div>
-						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+						<p class="text-brutal-text leading-relaxed">
 							Leading technical initiatives at one of Brazil's leading HR tech companies, focusing on innovative recruitment solutions.
 						</p>
 					</div>
 
-					<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+					<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 						<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 							<div>
-								<h3 class="text-xl font-bold text-gray-900 dark:text-white">Staff Software Engineer</h3>
-								<p class="text-blue-600 dark:text-blue-400 font-medium">GRIN</p>
+								<h3 class="text-2xl font-titulos text-brutal-text uppercase">Staff Software Engineer</h3>
+								<p class="text-brutal-accent font-bold">GRIN</p>
 							</div>
-							<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">Dec 2023 - May 2024</span>
+							<span class="text-brutal-text font-bold mt-2 md:mt-0">Dec 2023 - May 2024</span>
 						</div>
-						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+						<p class="text-brutal-text leading-relaxed">
 							Implemented microfrontend architecture using React, led Facebook integration rewrite, contributed to Laravel backend optimization, and participated in architectural discussions for modernizing monolithic applications.
 						</p>
 					</div>
 
-					<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+					<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 						<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 							<div>
-								<h3 class="text-xl font-bold text-gray-900 dark:text-white">Senior Software Engineer</h3>
-								<p class="text-blue-600 dark:text-blue-400 font-medium">The Luupe</p>
+								<h3 class="text-2xl font-titulos text-brutal-text uppercase">Senior Software Engineer</h3>
+								<p class="text-brutal-accent font-bold">The Luupe</p>
 							</div>
-							<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">Apr 2022 - Present</span>
+							<span class="text-brutal-text font-bold mt-2 md:mt-0">Apr 2022 - Present</span>
 						</div>
-						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+						<p class="text-brutal-text leading-relaxed">
 							Technology team member at a startup creating a global online platform and community of women and non-binary photographers collaborating to provide diverse content for brands.
 						</p>
 					</div>
 
-					<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+					<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 						<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 							<div>
-								<h3 class="text-xl font-bold text-gray-900 dark:text-white">Lead Software Developer/Consultant</h3>
-								<p class="text-blue-600 dark:text-blue-400 font-medium">ThoughtWorks</p>
+								<h3 class="text-2xl font-titulos text-brutal-text uppercase">Lead Software Developer/Consultant</h3>
+								<p class="text-brutal-accent font-bold">ThoughtWorks</p>
 							</div>
-							<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">Feb 2019 - Apr 2022</span>
+							<span class="text-brutal-text font-bold mt-2 md:mt-0">Feb 2019 - Apr 2022</span>
 						</div>
-						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+						<p class="text-brutal-text leading-relaxed">
 							Led development of digital banking solutions using Kotlin microservices architecture. Provided technical leadership through knowledge sharing, pair programming, and helped resolve technical and organizational challenges. Worked on microfrontend strategies for Brazil's largest cosmetics company.
 						</p>
 					</div>
 
-					<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+					<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 						<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 							<div>
-								<h3 class="text-xl font-bold text-gray-900 dark:text-white">Solutions Architect</h3>
-								<p class="text-blue-600 dark:text-blue-400 font-medium">Itaú Unibanco</p>
+								<h3 class="text-2xl font-titulos text-brutal-text uppercase">Solutions Architect</h3>
+								<p class="text-brutal-accent font-bold">Itaú Unibanco</p>
 							</div>
-							<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">Nov 2018 - Feb 2019</span>
+							<span class="text-brutal-text font-bold mt-2 md:mt-0">Nov 2018 - Feb 2019</span>
 						</div>
-						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+						<p class="text-brutal-text leading-relaxed">
 							Solutions Architecture team member at Brazil's largest bank. Authored development guidelines, customized software for client hardware environments, and created migration strategies for architectural updates.
 						</p>
 					</div>
 
-					<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+					<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 						<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 							<div>
-								<h3 class="text-xl font-bold text-gray-900 dark:text-white">Software Developer</h3>
-								<p class="text-blue-600 dark:text-blue-400 font-medium">Netbiis</p>
+								<h3 class="text-2xl font-titulos text-brutal-text uppercase">Software Developer</h3>
+								<p class="text-brutal-accent font-bold">Netbiis</p>
 							</div>
-							<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">Jun 2017 - Nov 2018</span>
+							<span class="text-brutal-text font-bold mt-2 md:mt-0">Jun 2017 - Nov 2018</span>
 						</div>
-						<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+						<p class="text-brutal-text leading-relaxed">
 							Led early development of a labor compliance platform using .NET Core and WebAPI backend, Node.js services for background processing, and cross-platform mobile apps with Ionic.
 						</p>
 					</div>
@@ -129,10 +131,10 @@ import Contact from '../components/Contact';
 					<div class="text-center">
 						<button 
 							id="showMoreBtn" 
-							class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
+							class="inline-block bg-transparent text-brutal-text border-3 border-brutal-border font-titulos uppercase px-8 py-4 rounded-none hover:bg-brutal-accent hover:text-white transition"
 						>
 							<span>Show Earlier Experience</span>
-							<svg class="ml-2 w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<svg class="ml-2 w-4 h-4 transform transition-transform duration-200 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
 							</svg>
 						</button>
@@ -140,80 +142,80 @@ import Contact from '../components/Contact';
 
 					<!-- Earlier Experience (Hidden by default) -->
 					<div id="earlierExperience" class="space-y-8 hidden">
-						<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+						<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 							<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 								<div>
-									<h3 class="text-xl font-bold text-gray-900 dark:text-white">Software Engineer</h3>
-									<p class="text-blue-600 dark:text-blue-400 font-medium">Crossover for Work</p>
+									<h3 class="text-2xl font-titulos text-brutal-text uppercase">Software Engineer</h3>
+									<p class="text-brutal-accent font-bold">Crossover for Work</p>
 								</div>
-								<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">Jun 2016 - Jun 2017</span>
+								<span class="text-brutal-text font-bold mt-2 md:mt-0">Jun 2016 - Jun 2017</span>
 							</div>
-							<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+							<p class="text-brutal-text leading-relaxed">
 								Enhanced code quality and unit testing for various projects in C# and Java. Focused on code refactoring and creating automated and manual unit tests for legacy systems.
 							</p>
 						</div>
 
-						<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+						<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 							<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 								<div>
-									<h3 class="text-xl font-bold text-gray-900 dark:text-white">Senior Software Developer</h3>
-									<p class="text-blue-600 dark:text-blue-400 font-medium">Digitalmed</p>
+									<h3 class="text-2xl font-titulos text-brutal-text uppercase">Senior Software Developer</h3>
+									<p class="text-brutal-accent font-bold">Digitalmed</p>
 								</div>
-								<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">Sep 2012 - Jun 2016</span>
+								<span class="text-brutal-text font-bold mt-2 md:mt-0">Sep 2012 - Jun 2016</span>
 							</div>
-							<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+							<p class="text-brutal-text leading-relaxed">
 								Development team member for a large medical laboratory solution. Responsible for significant performance improvements and providing technical guidance to new team members. Developed complex applications using C#, ASP.Net (WebForms, MVC, Web.API), NHibernate, WCF, and various frontend frameworks.
 							</p>
 						</div>
 
-						<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+						<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 							<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 								<div>
-									<h3 class="text-xl font-bold text-gray-900 dark:text-white">.NET Developer/Analyst</h3>
-									<p class="text-blue-600 dark:text-blue-400 font-medium">Adapt Solutions</p>
+									<h3 class="text-2xl font-titulos text-brutal-text uppercase">.NET Developer/Analyst</h3>
+									<p class="text-brutal-accent font-bold">Adapt Solutions</p>
 								</div>
-								<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">Jan 2011 - Sep 2012</span>
+								<span class="text-brutal-text font-bold mt-2 md:mt-0">Jan 2011 - Sep 2012</span>
 							</div>
-							<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+							<p class="text-brutal-text leading-relaxed">
 								Developed and maintained software for managing public schools. Created a tool for generating dynamic reports using ASP.Net and Microsoft Report Definition Language. Played a key role in defining architecture and leading development of a new medical care application.
 							</p>
 						</div>
 
-						<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+						<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 							<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 								<div>
-									<h3 class="text-xl font-bold text-gray-900 dark:text-white">.NET Developer/Software Developer</h3>
-									<p class="text-blue-600 dark:text-blue-400 font-medium">CWI Software</p>
+									<h3 class="text-2xl font-titulos text-brutal-text uppercase">.NET Developer/Software Developer</h3>
+									<p class="text-brutal-accent font-bold">CWI Software</p>
 								</div>
-								<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">Jun 2010 - Dec 2010</span>
+								<span class="text-brutal-text font-bold mt-2 md:mt-0">Jun 2010 - Dec 2010</span>
 							</div>
-							<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+							<p class="text-brutal-text leading-relaxed">
 								Outsourced developer for a banking company, focusing on developing integrations between legacy systems and new applications. Development work utilized Service-Oriented Architecture (SOA) with WCF and WPF.
 							</p>
 						</div>
 
-						<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+						<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 							<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 								<div>
-									<h3 class="text-xl font-bold text-gray-900 dark:text-white">Web Developer/.NET Developer</h3>
-									<p class="text-blue-600 dark:text-blue-400 font-medium">Seeker Tecnologia</p>
+									<h3 class="text-2xl font-titulos text-brutal-text uppercase">Web Developer/.NET Developer</h3>
+									<p class="text-brutal-accent font-bold">Seeker Tecnologia</p>
 								</div>
-								<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">2008 - 2010</span>
+								<span class="text-brutal-text font-bold mt-2 md:mt-0">2008 - 2010</span>
 							</div>
-							<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+							<p class="text-brutal-text leading-relaxed">
 								Contributed to a comprehensive human resources platform. Designed and implemented an advanced Full-Text Search solution in SQL Server, greatly improving resume search capabilities. Developed features for large-scale applications using VB.Net, ASP.Net WebForms, and SQL Server.
 							</p>
 						</div>
 
-						<div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+						<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
 							<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
 								<div>
-									<h3 class="text-xl font-bold text-gray-900 dark:text-white">IT Support Analyst</h3>
-									<p class="text-blue-600 dark:text-blue-400 font-medium">Colsan - Associação Beneficiente de Coleta de Sangue</p>
+									<h3 class="text-2xl font-titulos text-brutal-text uppercase">IT Support Analyst</h3>
+									<p class="text-brutal-accent font-bold">Colsan - Associação Beneficiente de Coleta de Sangue</p>
 								</div>
-								<span class="text-gray-500 dark:text-gray-400 font-medium mt-2 md:mt-0">Jan 2006 - Aug 2008</span>
+								<span class="text-brutal-text font-bold mt-2 md:mt-0">Jan 2006 - Aug 2008</span>
 							</div>
-							<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+							<p class="text-brutal-text leading-relaxed">
 								Provided IT support to internal users, including troubleshooting hardware and software issues on Windows operating systems and performing backup routines. Early career role that established foundation in technology support.
 							</p>
 						</div>
@@ -223,54 +225,54 @@ import Contact from '../components/Contact';
 		</section>
 
 		<!-- Projects Section -->
-		<section id="projects" class="py-20 bg-white dark:bg-gray-900">
+		<section id="projects" class="py-20 bg-brutal-bg border-t-3 border-brutal-border">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+				<div class="mb-16">
+					<h2 class="text-5xl md:text-6xl font-sans font-titulos tracking-tighter text-brutal-text uppercase mb-4">
 						Featured Projects
 					</h2>
-					<p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+					<p class="text-lg text-brutal-text leading-relaxed max-w-prose">
 						Some of the projects I've worked on and personal experiments
 					</p>
 				</div>
 				
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-						<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Digital Banking Platform</h3>
-						<p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+					<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
+						<h3 class="text-2xl font-titulos text-brutal-text uppercase mb-4">Digital Banking Platform</h3>
+						<p class="text-brutal-text leading-relaxed mb-6">
 							Scalable microservices architecture for digital banking solutions, focusing on credit card services and backend systems.
 						</p>
 						<div class="flex flex-wrap gap-2">
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">Kotlin</span>
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">Microservices</span>
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">AWS</span>
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">Docker</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">Kotlin</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">Microservices</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">AWS</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">Docker</span>
 						</div>
 					</div>
 
-					<div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-						<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Creator Platform</h3>
-						<p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+					<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
+						<h3 class="text-2xl font-titulos text-brutal-text uppercase mb-4">Creator Platform</h3>
+						<p class="text-brutal-text leading-relaxed mb-6">
 							Global online platform connecting women and non-binary photographers with brands for diverse content creation.
 						</p>
 						<div class="flex flex-wrap gap-2">
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">React</span>
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">TypeScript</span>
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">Node.js</span>
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">Cloud</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">React</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">TypeScript</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">Node.js</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">Cloud</span>
 						</div>
 					</div>
 
-					<div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-						<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Labor Compliance Platform</h3>
-						<p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+					<div class="border-3 border-brutal-border p-8 bg-white rounded-none">
+						<h3 class="text-2xl font-titulos text-brutal-text uppercase mb-4">Labor Compliance Platform</h3>
+						<p class="text-brutal-text leading-relaxed mb-6">
 							Platform helping businesses monitor employee breaks and prevent violations, with real-time dashboards and mobile apps.
 						</p>
 						<div class="flex flex-wrap gap-2">
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">.NET Core</span>
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">WebAPI</span>
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">Ionic</span>
-							<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">Node.js</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">.NET Core</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">WebAPI</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">Ionic</span>
+							<span class="px-3 py-1 bg-brutal-text text-white text-sm font-titulos uppercase">Node.js</span>
 						</div>
 					</div>
 				</div>
@@ -281,54 +283,54 @@ import Contact from '../components/Contact';
 	</main>
 
 	<!-- Footer -->
-	<footer class="bg-gray-900 text-white py-12">
+	<footer class="bg-brutal-text text-brutal-bg py-12">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 border-b-3 border-brutal-bg pb-8">
 				<div>
-					          <h3 class="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            marcusvinicius.info
-          </h3>
-					<p class="text-gray-300 leading-relaxed">
+					<h3 class="text-2xl font-titulos mb-4 uppercase tracking-tighter">
+						marcusvinicius.info
+					</h3>
+					<p class="text-brutal-bg leading-relaxed">
 						Software Developer & Tech Leader passionate about creating innovative solutions 
 						and mentoring the next generation of developers.
 					</p>
 				</div>
 				
 				<div>
-					<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+					<h4 class="text-lg font-titulos uppercase mb-4 tracking-tight">Quick Links</h4>
 					<div class="space-y-2">
-						<a href="#about" class="block text-gray-300 hover:text-white transition-colors">About</a>
-						<a href="#skills" class="block text-gray-300 hover:text-white transition-colors">Skills</a>
-						<a href="#experience" class="block text-gray-300 hover:text-white transition-colors">Experience</a>
-						<a href="#projects" class="block text-gray-300 hover:text-white transition-colors">Projects</a>
-						<a href="#contact" class="block text-gray-300 hover:text-white transition-colors">Contact</a>
+						<a href="#about" class="block text-brutal-bg hover:underline transition-colors">About</a>
+						<a href="#skills" class="block text-brutal-bg hover:underline transition-colors">Skills</a>
+						<a href="#experience" class="block text-brutal-bg hover:underline transition-colors">Experience</a>
+						<a href="#projects" class="block text-brutal-bg hover:underline transition-colors">Projects</a>
+						<a href="#contact" class="block text-brutal-bg hover:underline transition-colors">Contact</a>
 					</div>
 				</div>
 				
 				<div>
-					<h4 class="text-lg font-semibold mb-4">Connect</h4>
-					          <div class="flex space-x-4">
-            <a href="https://github.com/marcusvinicius" class="text-gray-300 hover:text-white transition-colors">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-            </a>
-            <a href="https://linkedin.com/in/marcusvx" class="text-gray-300 hover:text-white transition-colors">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
-            <a href="mailto:marcus@marcusvinicius.info" class="text-gray-300 hover:text-white transition-colors">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-            </a>
-          </div>
+					<h4 class="text-lg font-titulos uppercase mb-4 tracking-tight">Connect</h4>
+					<div class="flex space-x-4">
+						<a href="https://github.com/marcusvinicius" class="text-brutal-bg hover:underline transition-colors">
+							<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+							</svg>
+						</a>
+						<a href="https://linkedin.com/in/marcusvx" class="text-brutal-bg hover:underline transition-colors">
+							<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+							</svg>
+						</a>
+						<a href="mailto:marcus@marcusvinicius.info" class="text-brutal-bg hover:underline transition-colors">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+							</svg>
+						</a>
+					</div>
 				</div>
 			</div>
 			
-			<div class="border-t border-gray-700 pt-8 text-center">
-				<p class="text-gray-300">
+			<div class="pt-8 text-center">
+				<p class="text-brutal-bg">
 					© {new Date().getFullYear()} Marcus Vinicius Ximenes. Built with Astro, React, and Tailwind CSS.
 				</p>
 			</div>
