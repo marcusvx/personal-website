@@ -13,9 +13,10 @@ export default {
           bg: '#F1F0EE',      // Off-white texturizado (pedra/concreto claro)
           text: '#1C1917',    // Quase preto (stone-900)
           border: '#1C1917',  // Mesmo tom do texto para bordas fortes
-          // Cor de destaque única e forte
           accent: '#DC2626',  // Vermelho Industrial (red-600)
-        }
+        },
+        // Cores para bordas (compatível com Tailwind)
+        'brutal-border': '#1C1917',
       },
       fontFamily: {
         // Títulos: Pesados, geométricos, modernos
@@ -28,6 +29,9 @@ export default {
       },
       borderWidth: {
         '3': '3px', // Bordas um pouco mais grossas que o padrão
+      },
+      borderColor: {
+        brutal: '#1C1917',
       }
     },
   },
