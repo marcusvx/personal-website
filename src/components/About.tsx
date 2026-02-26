@@ -50,8 +50,6 @@ export default function About() {
           </p>
         </div>
 
-        <hr className="border-t-3 border-brutal-border my-12" />
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-start">
@@ -102,7 +100,6 @@ export default function About() {
         </div>
 
         {/* Highlights */}
-        <hr className="border-t-3 border-brutal-border my-12" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border-l-3 border-r-3 border-brutal-border">
           {highlights.map((highlight, index) => (
             <div
