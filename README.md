@@ -53,29 +53,32 @@ A modern, responsive personal website and portfolio built with Astro, React, and
 
 All commands are run from the root directory:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Install dependencies                             |
-| `npm run dev`             | Start local dev server at `localhost:4321`      |
-| `npm run build`           | Build production site to `./dist/`              |
-| `npm run preview`         | Preview build locally before deploying          |
-| `npm run astro ...`       | Run Astro CLI commands                           |
-| `npm run astro -- --help` | Get help with Astro CLI                         |
+| Command                   | Action                                     |
+| :------------------------ | :----------------------------------------- |
+| `npm install`             | Install dependencies                       |
+| `npm run dev`             | Start local dev server at `localhost:4321` |
+| `npm run build`           | Build production site to `./dist/`         |
+| `npm run preview`         | Preview build locally before deploying     |
+| `npm run astro ...`       | Run Astro CLI commands                     |
+| `npm run astro -- --help` | Get help with Astro CLI                    |
 
 ## 🚀 Getting Started
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/marcusvinicius/personal-website.git
    cd personal-website
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start development server**
+
    ```bash
    npm run dev
    ```
@@ -104,8 +107,9 @@ The website features a sophisticated dark/light theme system:
 ## 📱 Responsive Design
 
 Fully responsive design optimized for:
+
 - 📱 Mobile devices (320px+)
-- 📟 Tablets (768px+)  
+- 📟 Tablets (768px+)
 - 💻 Desktops (1024px+)
 - 🖥️ Large screens (1280px+)
 
