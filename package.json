@@ -15,19 +15,19 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@astrojs/react": "^4.3.0",
-    "@astrojs/tailwind": "^6.0.2",
-    "@tailwindcss/typography": "^0.5.16",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "astro": "^5.10.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "tailwindcss": "^3.4.17"
+    "@astrojs/react": "^4.4.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.2.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.18.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
-    "@types/node": "^24.0.8",
-    "eslint": "^9.39.3",
+    "@types/node": "^25.3.2",
+    "eslint": "^9.0.0",
     "eslint-plugin-astro": "^1.6.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
@@ -35,6 +35,6 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript-eslint": "^8.56.1",
-    "wrangler": "^4.22.0"
+    "wrangler": "^4.69.0"
   }
 }

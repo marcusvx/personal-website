@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  /* Colors */
+  --color-brutal-bg: #f1f0ee;
+  --color-brutal-text: #1c1917;
+  --color-brutal-border: #1c1917;
+  --color-brutal-accent: #dc2626;
+
+  /* Font families — v4 uses --font-* namespace */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Font weights */
+  --font-weight-titulos: 800;
+
+  /* Border widths — v4 uses --border-* namespace */
+  --border-3: 3px;
+}
