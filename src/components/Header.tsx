@@ -1,14 +1,16 @@
 import { useState } from 'react'
+import { useLanguage } from '../i18n/useLanguage'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { lang, t, setLang } = useLanguage()
 
   const navItems = [
-    { href: '#about', label: 'About' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#about', label: t.nav.about },
+    { href: '#experience', label: t.nav.experience },
+    { href: '#skills', label: t.nav.skills },
+    { href: '#projects', label: t.nav.projects },
+    { href: '#contact', label: t.nav.contact },
   ]
 
   return (
@@ -38,8 +40,18 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
+          {/* Right side: Language Toggle + Mobile Menu Button */}
+          <div className="flex items-center space-x-3">
+            {/* Language Toggle */}
+            <button
+              onClick={() => setLang(lang === 'en' ? 'pt' : 'en')}
+              className="border-2 border-brutal-border px-3 py-1 text-xs font-bold uppercase tracking-tight text-brutal-text transition-colors duration-200 hover:bg-brutal-accent hover:text-white"
+              aria-label="Toggle language"
+              title={lang === 'en' ? 'Switch to Portuguese' : 'Mudar para Inglês'}
+            >
+              {lang === 'en' ? 'PT' : 'EN'}
+            </button>
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -80,7 +92,7 @@ export default function Header() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 text-sm font-bold uppercase text-brutal-text transition-all duration-200 hover:bg-brutal-accent hover:text-brutal-accent hover:text-white"
+                  className="block px-3 py-2 text-sm font-bold uppercase text-brutal-text transition-all duration-200 hover:bg-brutal-accent hover:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
