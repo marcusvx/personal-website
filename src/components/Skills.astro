@@ -30,7 +30,7 @@ const pt = translations.pt.skills
       en.categories.map((category, catIdx) => (
         <div class="mb-12">
           <h3
-            class="mb-6 border-b-4 border-stone-900 pb-2 text-2xl font-black uppercase text-brutal-text"
+            class="mb-6 border-b-4 border-stone-900 pb-2 text-2xl font-black uppercase text-brutal-text dark:border-stone-300"
             data-i18n={`skills.categories.${catIdx}.title`}
           >
             {category.title}
@@ -40,7 +40,7 @@ const pt = translations.pt.skills
               <div class="skill-card cursor-pointer [perspective:800px]">
                 <div class="card-inner relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d]">
                   <!-- Front: icon + name -->
-                  <div class="card-face absolute inset-0 flex flex-col items-center justify-center gap-4 border-3 border-stone-900 bg-white p-6 [backface-visibility:hidden]">
+                  <div class="card-face absolute inset-0 flex flex-col items-center justify-center gap-4 border-3 border-stone-900 bg-white p-6 [backface-visibility:hidden] dark:border-stone-300 dark:bg-stone-900">
                     <Icon name={skill.icon} class="h-12 w-12 text-brutal-text" />
                     <span class="text-center text-sm font-bold uppercase tracking-tight text-brutal-text">
                       {skill.name}

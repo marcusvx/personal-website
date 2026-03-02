@@ -106,7 +106,7 @@ export default function About() {
           {t.about.highlights.map((highlight, index) => (
             <div
               key={index}
-              className="border-b-3 border-r-3 border-brutal-border bg-white p-8 last:border-r-0"
+              className="border-b-3 border-r-3 border-brutal-border bg-white p-8 last:border-r-0 dark:bg-stone-900"
             >
               <div className="mb-4 text-brutal-accent">{icons[index]}</div>
               <h4 className="mb-3 text-lg font-titulos uppercase tracking-tight text-brutal-text">

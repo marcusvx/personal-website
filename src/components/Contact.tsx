@@ -76,7 +76,7 @@ export default function Contact() {
                 href={info.link}
                 target={info.link.startsWith('http') ? '_blank' : undefined}
                 rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="group flex items-center space-x-4 border-2 border-brutal-border bg-white p-4 transition-colors duration-200 hover:bg-brutal-accent hover:text-white"
+                className="group flex items-center space-x-4 border-2 border-brutal-border bg-white p-4 transition-colors duration-200 hover:bg-brutal-accent hover:text-white dark:bg-stone-900"
               >
                 <div className="text-brutal-text group-hover:text-white">{info.icon}</div>
                 <div>
