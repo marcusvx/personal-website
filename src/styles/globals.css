@@ -1,8 +1,11 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
+/* Enable class-based dark mode (Tailwind v4 requires this explicit variant declaration) */
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
-  /* Colors */
+  /* Colors — Light theme (default) */
   --color-brutal-bg: #f1f0ee;
   --color-brutal-text: #1c1917;
   --color-brutal-border: #1c1917;
@@ -17,4 +20,12 @@
 
   /* Border widths — v4 uses --border-* namespace */
   --border-3: 3px;
+}
+
+/* Dark mode — override color tokens when .dark is on <html> */
+.dark {
+  --color-brutal-bg: #111110;
+  --color-brutal-text: #e8e5df;
+  --color-brutal-border: #e8e5df;
+  /* accent stays the same red in both modes */
 }

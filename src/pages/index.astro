@@ -3,7 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import Skills from '../components/Skills.astro'
 import Contact from '../components/Contact'
+
+import translations from '../i18n/translations'
+const en = translations.en
+const pt = translations.pt
 ---
 
 <BaseLayout title="Marcus Ximenes - Software Developer & Tech Leader">
@@ -12,52 +17,7 @@ import Contact from '../components/Contact'
     <Hero client:load />
     <About client:load />
 
-    <!-- Skills Section -->
-    <section id="skills" class="border-t-3 border-brutal-border bg-brutal-bg py-20">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mb-16">
-          <h2
-            class="mb-4 font-sans text-5xl font-titulos uppercase tracking-tighter text-brutal-text md:text-6xl"
-          >
-            Technical Skills
-          </h2>
-          <p class="max-w-prose text-lg leading-relaxed text-brutal-text">
-            Technologies and tools I work with to bring ideas to life
-          </p>
-        </div>
-
-        <div
-          class="grid grid-cols-2 gap-0 border-l-3 border-r-3 border-t-3 border-brutal-border md:grid-cols-3 lg:grid-cols-4"
-        >
-          {
-            [
-              'Kotlin',
-              'TypeScript',
-              'Java',
-              '.NET Core',
-              'Node.js',
-              'React',
-              'Angular',
-              'GraphQL',
-              'JavaScript',
-              'C#',
-              'AWS',
-              'Docker',
-              'DevOps',
-              'Microservices',
-              'TDD',
-              'SOLID',
-            ].map((skill) => (
-              <div class="border-b-3 border-r-3 border-brutal-border bg-white p-6 text-center last:border-r-0">
-                <div class="text-base font-titulos uppercase tracking-tight text-brutal-text">
-                  {skill}
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </section>
+    <Skills />
 
     <!-- Experience Section -->
     <section id="experience" class="border-t-3 border-brutal-border bg-brutal-bg py-20">
@@ -65,114 +25,34 @@ import Contact from '../components/Contact'
         <div class="mb-16">
           <h2
             class="mb-4 font-sans text-5xl font-titulos uppercase tracking-tighter text-brutal-text md:text-6xl"
+            data-i18n="experience.title"
           >
-            Professional Experience
+            {en.experience.title}
           </h2>
-          <p class="max-w-prose text-lg leading-relaxed text-brutal-text">
-            A journey through my career highlights and key achievements
+          <p class="max-w-prose text-lg leading-relaxed text-brutal-text" data-i18n="experience.subtitle">
+            {en.experience.subtitle}
           </p>
         </div>
 
         <div class="space-y-8">
-          <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-            <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                  Staff Software Engineer
-                </h3>
-                <p class="font-bold text-brutal-accent">Gupy</p>
+          {en.experience.jobs.map((job, idx) => (
+            <div class="rounded-none border-3 border-brutal-border bg-white p-8 dark:bg-stone-900">
+              <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                <div>
+                  <h3 class="text-2xl font-titulos uppercase text-brutal-text" data-i18n={`experience.jobs.${idx}.title`}>
+                    {job.title}
+                  </h3>
+                  <p class="font-bold text-brutal-accent">{job.company}</p>
+                </div>
+                <span class="mt-2 font-bold text-brutal-text md:mt-0" data-i18n={`experience.jobs.${idx}.period`}>
+                  {job.period}
+                </span>
               </div>
-              <span class="mt-2 font-bold text-brutal-text md:mt-0">May 2024 - Present</span>
+              <p class="leading-relaxed text-brutal-text" data-i18n={`experience.jobs.${idx}.description`}>
+                {job.description}
+              </p>
             </div>
-            <p class="leading-relaxed text-brutal-text">
-              Leading technical initiatives at one of Brazil&apos;s leading HR tech companies, focusing
-              on innovative recruitment solutions.
-            </p>
-          </div>
-
-          <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-            <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                  Staff Software Engineer
-                </h3>
-                <p class="font-bold text-brutal-accent">GRIN</p>
-              </div>
-              <span class="mt-2 font-bold text-brutal-text md:mt-0">Dec 2023 - May 2024</span>
-            </div>
-            <p class="leading-relaxed text-brutal-text">
-              Implemented microfrontend architecture using React, led Facebook integration rewrite,
-              contributed to Laravel backend optimization, and participated in architectural
-              discussions for modernizing monolithic applications.
-            </p>
-          </div>
-
-          <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-            <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                  Senior Software Engineer
-                </h3>
-                <p class="font-bold text-brutal-accent">The Luupe</p>
-              </div>
-              <span class="mt-2 font-bold text-brutal-text md:mt-0">Apr 2022 - Present</span>
-            </div>
-            <p class="leading-relaxed text-brutal-text">
-              Technology team member at a startup creating a global online platform and community of
-              women and non-binary photographers collaborating to provide diverse content for
-              brands.
-            </p>
-          </div>
-
-          <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-            <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                  Lead Software Developer/Consultant
-                </h3>
-                <p class="font-bold text-brutal-accent">ThoughtWorks</p>
-              </div>
-              <span class="mt-2 font-bold text-brutal-text md:mt-0">Feb 2019 - Apr 2022</span>
-            </div>
-            <p class="leading-relaxed text-brutal-text">
-              Led development of digital banking solutions using Kotlin microservices architecture.
-              Provided technical leadership through knowledge sharing, pair programming, and helped
-              resolve technical and organizational challenges. Worked on microfrontend strategies
-              for Brazil&apos;s largest cosmetics company.
-            </p>
-          </div>
-
-          <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-            <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                  Solutions Architect
-                </h3>
-                <p class="font-bold text-brutal-accent">Itaú Unibanco</p>
-              </div>
-              <span class="mt-2 font-bold text-brutal-text md:mt-0">Nov 2018 - Feb 2019</span>
-            </div>
-            <p class="leading-relaxed text-brutal-text">
-              Solutions Architecture team member at Brazil&apos;s largest bank. Authored development
-              guidelines, customized software for client hardware environments, and created
-              migration strategies for architectural updates.
-            </p>
-          </div>
-
-          <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-            <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h3 class="text-2xl font-titulos uppercase text-brutal-text">Software Developer</h3>
-                <p class="font-bold text-brutal-accent">Netbiis</p>
-              </div>
-              <span class="mt-2 font-bold text-brutal-text md:mt-0">Jun 2017 - Nov 2018</span>
-            </div>
-            <p class="leading-relaxed text-brutal-text">
-              Led early development of a labor compliance platform using .NET Core and WebAPI
-              backend, Node.js services for background processing, and cross-platform mobile apps
-              with Ionic.
-            </p>
-          </div>
+          ))}
 
           <!-- Show More Button -->
           <div class="text-center">
@@ -180,7 +60,7 @@ import Contact from '../components/Contact'
               id="showMoreBtn"
               class="inline-block rounded-none border-3 border-brutal-border bg-transparent px-8 py-4 font-titulos uppercase text-brutal-text transition hover:bg-brutal-accent hover:text-white"
             >
-              <span>Show Earlier Experience</span>
+              <span data-i18n="experience.showEarlier">{en.experience.showEarlier}</span>
               <svg
                 class="ml-2 inline h-4 w-4 transform transition-transform duration-200"
                 fill="none"
@@ -198,111 +78,24 @@ import Contact from '../components/Contact'
 
           <!-- Earlier Experience (Hidden by default) -->
           <div id="earlierExperience" class="hidden space-y-8">
-            <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-              <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-                <div>
-                  <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                    Software Engineer
-                  </h3>
-                  <p class="font-bold text-brutal-accent">Crossover for Work</p>
+            {en.experience.earlierJobs.map((job, idx) => (
+              <div class="rounded-none border-3 border-brutal-border bg-white p-8 dark:bg-stone-900">
+                <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
+                  <div>
+                    <h3 class="text-2xl font-titulos uppercase text-brutal-text" data-i18n={`experience.earlierJobs.${idx}.title`}>
+                      {job.title}
+                    </h3>
+                    <p class="font-bold text-brutal-accent">{job.company}</p>
+                  </div>
+                  <span class="mt-2 font-bold text-brutal-text md:mt-0" data-i18n={`experience.earlierJobs.${idx}.period`}>
+                    {job.period}
+                  </span>
                 </div>
-                <span class="mt-2 font-bold text-brutal-text md:mt-0">Jun 2016 - Jun 2017</span>
+                <p class="leading-relaxed text-brutal-text" data-i18n={`experience.earlierJobs.${idx}.description`}>
+                  {job.description}
+                </p>
               </div>
-              <p class="leading-relaxed text-brutal-text">
-                Enhanced code quality and unit testing for various projects in C# and Java. Focused
-                on code refactoring and creating automated and manual unit tests for legacy systems.
-              </p>
-            </div>
-
-            <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-              <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-                <div>
-                  <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                    Senior Software Developer
-                  </h3>
-                  <p class="font-bold text-brutal-accent">Digitalmed</p>
-                </div>
-                <span class="mt-2 font-bold text-brutal-text md:mt-0">Sep 2012 - Jun 2016</span>
-              </div>
-              <p class="leading-relaxed text-brutal-text">
-                Development team member for a large medical laboratory solution. Responsible for
-                significant performance improvements and providing technical guidance to new team
-                members. Developed complex applications using C#, ASP.Net (WebForms, MVC, Web.API),
-                NHibernate, WCF, and various frontend frameworks.
-              </p>
-            </div>
-
-            <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-              <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-                <div>
-                  <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                    .NET Developer/Analyst
-                  </h3>
-                  <p class="font-bold text-brutal-accent">Adapt Solutions</p>
-                </div>
-                <span class="mt-2 font-bold text-brutal-text md:mt-0">Jan 2011 - Sep 2012</span>
-              </div>
-              <p class="leading-relaxed text-brutal-text">
-                Developed and maintained software for managing public schools. Created a tool for
-                generating dynamic reports using ASP.Net and Microsoft Report Definition Language.
-                Played a key role in defining architecture and leading development of a new medical
-                care application.
-              </p>
-            </div>
-
-            <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-              <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-                <div>
-                  <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                    .NET Developer/Software Developer
-                  </h3>
-                  <p class="font-bold text-brutal-accent">CWI Software</p>
-                </div>
-                <span class="mt-2 font-bold text-brutal-text md:mt-0">Jun 2010 - Dec 2010</span>
-              </div>
-              <p class="leading-relaxed text-brutal-text">
-                Outsourced developer for a banking company, focusing on developing integrations
-                between legacy systems and new applications. Development work utilized
-                Service-Oriented Architecture (SOA) with WCF and WPF.
-              </p>
-            </div>
-
-            <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-              <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-                <div>
-                  <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                    Web Developer/.NET Developer
-                  </h3>
-                  <p class="font-bold text-brutal-accent">Seeker Tecnologia</p>
-                </div>
-                <span class="mt-2 font-bold text-brutal-text md:mt-0">2008 - 2010</span>
-              </div>
-              <p class="leading-relaxed text-brutal-text">
-                Contributed to a comprehensive human resources platform. Designed and implemented an
-                advanced Full-Text Search solution in SQL Server, greatly improving resume search
-                capabilities. Developed features for large-scale applications using VB.Net, ASP.Net
-                WebForms, and SQL Server.
-              </p>
-            </div>
-
-            <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-              <div class="mb-4 flex flex-col md:flex-row md:items-center md:justify-between">
-                <div>
-                  <h3 class="text-2xl font-titulos uppercase text-brutal-text">
-                    IT Support Analyst
-                  </h3>
-                  <p class="font-bold text-brutal-accent">
-                    Colsan - Associação Beneficiente de Coleta de Sangue
-                  </p>
-                </div>
-                <span class="mt-2 font-bold text-brutal-text md:mt-0">Jan 2006 - Aug 2008</span>
-              </div>
-              <p class="leading-relaxed text-brutal-text">
-                Provided IT support to internal users, including troubleshooting hardware and
-                software issues on Windows operating systems and performing backup routines. Early
-                career role that established foundation in technology support.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -314,84 +107,33 @@ import Contact from '../components/Contact'
         <div class="mb-16">
           <h2
             class="mb-4 font-sans text-5xl font-titulos uppercase tracking-tighter text-brutal-text md:text-6xl"
+            data-i18n="projects.title"
           >
-            Featured Projects
+            {en.projects.title}
           </h2>
-          <p class="max-w-prose text-lg leading-relaxed text-brutal-text">
-            Some of the projects I&apos;ve worked on and personal experiments
+          <p class="max-w-prose text-lg leading-relaxed text-brutal-text" data-i18n="projects.subtitle">
+            {en.projects.subtitle}
           </p>
         </div>
 
         <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-            <h3 class="mb-4 text-2xl font-titulos uppercase text-brutal-text">
-              Digital Banking Platform
-            </h3>
-            <p class="mb-6 leading-relaxed text-brutal-text">
-              Scalable microservices architecture for digital banking solutions, focusing on credit
-              card services and backend systems.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >Kotlin</span
-              >
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >Microservices</span
-              >
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >AWS</span
-              >
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >Docker</span
-              >
+          {en.projects.items.map((project, idx) => (
+            <div class="rounded-none border-3 border-brutal-border bg-white p-8 dark:bg-stone-900">
+              <h3 class="mb-4 text-2xl font-titulos uppercase text-brutal-text" data-i18n={`projects.items.${idx}.title`}>
+                {project.title}
+              </h3>
+              <p class="mb-6 leading-relaxed text-brutal-text" data-i18n={`projects.items.${idx}.description`}>
+                {project.description}
+              </p>
+              <div class="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-brutal-bg">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-
-          <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-            <h3 class="mb-4 text-2xl font-titulos uppercase text-brutal-text">Creator Platform</h3>
-            <p class="mb-6 leading-relaxed text-brutal-text">
-              Global online platform connecting women and non-binary photographers with brands for
-              diverse content creation.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >React</span
-              >
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >TypeScript</span
-              >
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >Node.js</span
-              >
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >Cloud</span
-              >
-            </div>
-          </div>
-
-          <div class="rounded-none border-3 border-brutal-border bg-white p-8">
-            <h3 class="mb-4 text-2xl font-titulos uppercase text-brutal-text">
-              Labor Compliance Platform
-            </h3>
-            <p class="mb-6 leading-relaxed text-brutal-text">
-              Platform helping businesses monitor employee breaks and prevent violations, with
-              real-time dashboards and mobile apps.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >.NET Core</span
-              >
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >WebAPI</span
-              >
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >Ionic</span
-              >
-              <span class="bg-brutal-text px-3 py-1 text-sm font-titulos uppercase text-white"
-                >Node.js</span
-              >
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
@@ -405,34 +147,28 @@ import Contact from '../components/Contact'
       <div class="border-brutal-bg mb-8 grid grid-cols-1 gap-8 border-b-3 pb-8 md:grid-cols-3">
         <div>
           <h3 class="mb-4 text-2xl font-titulos uppercase tracking-tighter">marcusvinicius.info</h3>
-          <p class="leading-relaxed text-brutal-bg">
-            Software Developer & Tech Leader passionate about creating innovative solutions and
-            mentoring the next generation of developers.
+          <p class="leading-relaxed text-brutal-bg" data-i18n="footer.tagline">
+            {en.footer.tagline}
           </p>
         </div>
 
         <div>
-          <h4 class="mb-4 text-lg font-titulos uppercase tracking-tight">Quick Links</h4>
+          <h4 class="mb-4 text-lg font-titulos uppercase tracking-tight" data-i18n="footer.quickLinks">
+            {en.footer.quickLinks}
+          </h4>
           <div class="space-y-2">
-            <a href="#about" class="block text-brutal-bg transition-colors hover:underline">About</a
-            >
-            <a href="#skills" class="block text-brutal-bg transition-colors hover:underline"
-              >Skills</a
-            >
-            <a href="#experience" class="block text-brutal-bg transition-colors hover:underline"
-              >Experience</a
-            >
-            <a href="#projects" class="block text-brutal-bg transition-colors hover:underline"
-              >Projects</a
-            >
-            <a href="#contact" class="block text-brutal-bg transition-colors hover:underline"
-              >Contact</a
-            >
+            <a href="#about" class="block text-brutal-bg transition-colors hover:underline" data-i18n="nav.about">{en.nav.about}</a>
+            <a href="#skills" class="block text-brutal-bg transition-colors hover:underline" data-i18n="nav.skills">{en.nav.skills}</a>
+            <a href="#experience" class="block text-brutal-bg transition-colors hover:underline" data-i18n="nav.experience">{en.nav.experience}</a>
+            <a href="#projects" class="block text-brutal-bg transition-colors hover:underline" data-i18n="nav.projects">{en.nav.projects}</a>
+            <a href="#contact" class="block text-brutal-bg transition-colors hover:underline" data-i18n="nav.contact">{en.nav.contact}</a>
           </div>
         </div>
 
         <div>
-          <h4 class="mb-4 text-lg font-titulos uppercase tracking-tight">Connect</h4>
+          <h4 class="mb-4 text-lg font-titulos uppercase tracking-tight" data-i18n="footer.connect">
+            {en.footer.connect}
+          </h4>
           <div class="flex space-x-4">
             <a
               href="https://github.com/marcusvinicius"
@@ -473,35 +209,173 @@ import Contact from '../components/Contact'
 
       <div class="pt-8 text-center">
         <p class="text-brutal-bg">
-          © {new Date().getFullYear()} Marcus Vinicius Ximenes. Built with Astro, React, and Tailwind
-          CSS.
+          © {new Date().getFullYear()} Marcus Vinicius Ximenes. <span data-i18n="footer.builtWith">{en.footer.builtWith}</span>
         </p>
       </div>
     </div>
   </footer>
 
   <script>
+    // ─── Show/Hide Earlier Experience ─────────────────────────────────────────
     document.addEventListener('DOMContentLoaded', function () {
       const showMoreBtn = document.getElementById('showMoreBtn')
       const earlierExperience = document.getElementById('earlierExperience')
-      const btnText = showMoreBtn.querySelector('span')
+      if (!showMoreBtn || !earlierExperience) return
+
+      const btnTextEl = showMoreBtn.querySelector<HTMLElement>('[data-i18n="experience.showEarlier"]')
       const btnIcon = showMoreBtn.querySelector('svg')
 
       showMoreBtn.addEventListener('click', function () {
         const isHidden = earlierExperience.classList.contains('hidden')
+        const lang = localStorage.getItem('lang') ?? 'en'
 
         if (isHidden) {
-          // Show earlier experience
           earlierExperience.classList.remove('hidden')
-          btnText.textContent = 'Hide Earlier Experience'
-          btnIcon.style.transform = 'rotate(180deg)'
+          if (btnTextEl) btnTextEl.textContent = lang === 'pt' ? 'Ocultar Experiência Anterior' : 'Hide Earlier Experience'
+          if (btnIcon) btnIcon.style.transform = 'rotate(180deg)'
         } else {
-          // Hide earlier experience
           earlierExperience.classList.add('hidden')
-          btnText.textContent = 'Show Earlier Experience'
-          btnIcon.style.transform = 'rotate(0deg)'
+          if (btnTextEl) btnTextEl.textContent = lang === 'pt' ? 'Mostrar Experiência Anterior' : 'Show Earlier Experience'
+          if (btnIcon) btnIcon.style.transform = 'rotate(0deg)'
         }
       })
+    })
+
+    // ─── i18n: server-rendered sections ───────────────────────────────────────
+    // Build-time data injected as JSON for client-side switching
+    const pageI18n: Record<string, Record<string, string>> = {
+      'experience.title': { en: 'Professional Experience', pt: 'Experiência Profissional' },
+      'experience.subtitle': {
+        en: 'A journey through my career highlights and key achievements',
+        pt: 'Uma jornada pelos destaques da minha carreira e conquistas principais',
+      },
+      'experience.showEarlier': { en: 'Show Earlier Experience', pt: 'Mostrar Experiência Anterior' },
+      'experience.jobs.0.title': { en: 'Staff Software Engineer', pt: 'Staff Software Engineer' },
+      'experience.jobs.0.period': { en: 'May 2024 - Present', pt: 'Mai 2024 - Presente' },
+      'experience.jobs.0.description': {
+        en: "Leading technical initiatives at one of Brazil's leading HR tech companies, focusing on innovative recruitment solutions.",
+        pt: 'Liderança de iniciativas técnicas em uma das principais empresas de HR tech do Brasil, com foco em soluções inovadoras de recrutamento.',
+      },
+      'experience.jobs.1.title': { en: 'Staff Software Engineer', pt: 'Staff Software Engineer' },
+      'experience.jobs.1.period': { en: 'Dec 2023 - May 2024', pt: 'Dez 2023 - Mai 2024' },
+      'experience.jobs.1.description': {
+        en: 'Implemented microfrontend architecture using React, led Facebook integration rewrite, contributed to Laravel backend optimization, and participated in architectural discussions for modernizing monolithic applications.',
+        pt: 'Implementei arquitetura de microfrontend com React, liderei a reescrita da integração com o Facebook, contribuí para a otimização do backend em Laravel e participei de discussões arquiteturais para modernização de aplicações monolíticas.',
+      },
+      'experience.jobs.2.title': { en: 'Senior Software Engineer', pt: 'Senior Software Engineer' },
+      'experience.jobs.2.period': { en: 'Apr 2022 - Present', pt: 'Abr 2022 - Presente' },
+      'experience.jobs.2.description': {
+        en: 'Technology team member at a startup creating a global online platform and community of women and non-binary photographers collaborating to provide diverse content for brands.',
+        pt: 'Membro do time de tecnologia de uma startup criando uma plataforma e comunidade global online de fotógrafas e pessoas não-binárias que colaboram para fornecer conteúdo diversificado para marcas.',
+      },
+      'experience.jobs.3.title': { en: 'Lead Software Developer/Consultant', pt: 'Lead Software Developer/Consultor' },
+      'experience.jobs.3.period': { en: 'Feb 2019 - Apr 2022', pt: 'Fev 2019 - Abr 2022' },
+      'experience.jobs.3.description': {
+        en: "Led development of digital banking solutions using Kotlin microservices architecture. Provided technical leadership through knowledge sharing, pair programming, and helped resolve technical and organizational challenges. Worked on microfrontend strategies for Brazil's largest cosmetics company.",
+        pt: 'Liderei o desenvolvimento de soluções de banking digital usando arquitetura de microsserviços com Kotlin. Proporcionei liderança técnica por meio de compartilhamento de conhecimento, programação em par e ajudei a resolver desafios técnicos e organizacionais. Trabalhei em estratégias de microfrontend para a maior empresa de cosméticos do Brasil.',
+      },
+      'experience.jobs.4.title': { en: 'Solutions Architect', pt: 'Arquiteto de Soluções' },
+      'experience.jobs.4.period': { en: 'Nov 2018 - Feb 2019', pt: 'Nov 2018 - Fev 2019' },
+      'experience.jobs.4.description': {
+        en: "Solutions Architecture team member at Brazil's largest bank. Authored development guidelines, customized software for client hardware environments, and created migration strategies for architectural updates.",
+        pt: 'Membro do time de Arquitetura de Soluções do maior banco do Brasil. Autores de diretrizes de desenvolvimento, customização de softwares para ambientes de hardware de clientes e criação de estratégias de migração para atualizações arquiteturais.',
+      },
+      'experience.jobs.5.title': { en: 'Software Developer', pt: 'Desenvolvedor de Software' },
+      'experience.jobs.5.period': { en: 'Jun 2017 - Nov 2018', pt: 'Jun 2017 - Nov 2018' },
+      'experience.jobs.5.description': {
+        en: 'Led early development of a labor compliance platform using .NET Core and WebAPI backend, Node.js services for background processing, and cross-platform mobile apps with Ionic.',
+        pt: 'Liderei o desenvolvimento inicial de uma plataforma de conformidade trabalhista usando backend com .NET Core e WebAPI, serviços Node.js para processamento em background e apps mobile multiplataforma com Ionic.',
+      },
+      'experience.earlierJobs.0.title': { en: 'Software Engineer', pt: 'Engenheiro de Software' },
+      'experience.earlierJobs.0.period': { en: 'Jun 2016 - Jun 2017', pt: 'Jun 2016 - Jun 2017' },
+      'experience.earlierJobs.0.description': {
+        en: 'Enhanced code quality and unit testing for various projects in C# and Java. Focused on code refactoring and creating automated and manual unit tests for legacy systems.',
+        pt: 'Melhorei a qualidade de código e testes unitários em vários projetos em C# e Java. Foco em refatoração de código e criação de testes automatizados e manuais para sistemas legados.',
+      },
+      'experience.earlierJobs.1.title': { en: 'Senior Software Developer', pt: 'Desenvolvedor de Software Sênior' },
+      'experience.earlierJobs.1.period': { en: 'Sep 2012 - Jun 2016', pt: 'Set 2012 - Jun 2016' },
+      'experience.earlierJobs.1.description': {
+        en: 'Development team member for a large medical laboratory solution. Responsible for significant performance improvements and providing technical guidance to new team members. Developed complex applications using C#, ASP.Net (WebForms, MVC, Web.API), NHibernate, WCF, and various frontend frameworks.',
+        pt: 'Membro do time de desenvolvimento de uma grande solução para laboratórios médicos. Responsável por melhorias significativas de performance e orientação técnica para novos membros da equipe. Desenvolvi aplicações complexas usando C#, ASP.Net (WebForms, MVC, Web.API), NHibernate, WCF e diversos frameworks de frontend.',
+      },
+      'experience.earlierJobs.2.title': { en: '.NET Developer/Analyst', pt: 'Desenvolvedor/Analista .NET' },
+      'experience.earlierJobs.2.period': { en: 'Jan 2011 - Sep 2012', pt: 'Jan 2011 - Set 2012' },
+      'experience.earlierJobs.2.description': {
+        en: 'Developed and maintained software for managing public schools. Created a tool for generating dynamic reports using ASP.Net and Microsoft Report Definition Language. Played a key role in defining architecture and leading development of a new medical care application.',
+        pt: 'Desenvolvi e mantive software para gestão de escolas públicas. Criei uma ferramenta para geração de relatórios dinâmicos com ASP.Net e Microsoft Report Definition Language. Tive papel fundamental na definição da arquitetura e liderança do desenvolvimento de uma nova aplicação de saúde.',
+      },
+      'experience.earlierJobs.3.title': { en: '.NET Developer/Software Developer', pt: 'Desenvolvedor .NET/Desenvolvedor de Software' },
+      'experience.earlierJobs.3.period': { en: 'Jun 2010 - Dec 2010', pt: 'Jun 2010 - Dez 2010' },
+      'experience.earlierJobs.3.description': {
+        en: 'Outsourced developer for a banking company, focusing on developing integrations between legacy systems and new applications. Development work utilized Service-Oriented Architecture (SOA) with WCF and WPF.',
+        pt: 'Desenvolvedor terceirizado para uma empresa bancária, com foco em integrações entre sistemas legados e novas aplicações. O trabalho utilizou Arquitetura Orientada a Serviços (SOA) com WCF e WPF.',
+      },
+      'experience.earlierJobs.4.title': { en: 'Web Developer/.NET Developer', pt: 'Desenvolvedor Web/Desenvolvedor .NET' },
+      'experience.earlierJobs.4.period': { en: '2008 - 2010', pt: '2008 - 2010' },
+      'experience.earlierJobs.4.description': {
+        en: 'Contributed to a comprehensive human resources platform. Designed and implemented an advanced Full-Text Search solution in SQL Server, greatly improving resume search capabilities. Developed features for large-scale applications using VB.Net, ASP.Net WebForms, and SQL Server.',
+        pt: 'Contribuí para uma plataforma completa de recursos humanos. Projetei e implementei uma solução avançada de Full-Text Search no SQL Server, melhorando significativamente a busca de currículos. Desenvolvi funcionalidades para aplicações de grande escala usando VB.Net, ASP.Net WebForms e SQL Server.',
+      },
+      'experience.earlierJobs.5.title': { en: 'IT Support Analyst', pt: 'Analista de Suporte de TI' },
+      'experience.earlierJobs.5.period': { en: 'Jan 2006 - Aug 2008', pt: 'Jan 2006 - Ago 2008' },
+      'experience.earlierJobs.5.description': {
+        en: 'Provided IT support to internal users, including troubleshooting hardware and software issues on Windows operating systems and performing backup routines. Early career role that established foundation in technology support.',
+        pt: 'Forneci suporte de TI a usuários internos, incluindo resolução de problemas de hardware e software em sistemas operacionais Windows e execução de rotinas de backup. Cargo de início de carreira que estabeleceu a base em suporte de tecnologia.',
+      },
+      'projects.title': { en: 'Featured Projects', pt: 'Projetos em Destaque' },
+      'projects.subtitle': {
+        en: "Some of the projects I've worked on and personal experiments",
+        pt: 'Alguns dos projetos em que trabalhei e experimentos pessoais',
+      },
+      'projects.items.0.title': { en: 'Digital Banking Platform', pt: 'Plataforma de Banking Digital' },
+      'projects.items.0.description': {
+        en: 'Scalable microservices architecture for digital banking solutions, focusing on credit card services and backend systems.',
+        pt: 'Arquitetura de microsserviços escalável para soluções de banking digital, com foco em serviços de cartão de crédito e sistemas de backend.',
+      },
+      'projects.items.1.title': { en: 'Creator Platform', pt: 'Plataforma para Criadores' },
+      'projects.items.1.description': {
+        en: 'Global online platform connecting women and non-binary photographers with brands for diverse content creation.',
+        pt: 'Plataforma online global conectando fotógrafas e pessoas não-binárias com marcas para criação de conteúdo diversificado.',
+      },
+      'projects.items.2.title': { en: 'Labor Compliance Platform', pt: 'Plataforma de Conformidade Trabalhista' },
+      'projects.items.2.description': {
+        en: 'Platform helping businesses monitor employee breaks and prevent violations, with real-time dashboards and mobile apps.',
+        pt: 'Plataforma que auxilia empresas a monitorar intervalos de funcionários e evitar infrações, com dashboards em tempo real e apps mobile.',
+      },
+      'footer.tagline': {
+        en: 'Software Developer & Tech Leader passionate about creating innovative solutions and mentoring the next generation of developers.',
+        pt: 'Desenvolvedor de Software e Líder Técnico apaixonado por criar soluções inovadoras e mentorar a próxima geração de desenvolvedores.',
+      },
+      'footer.quickLinks': { en: 'Quick Links', pt: 'Links Rápidos' },
+      'footer.connect': { en: 'Connect', pt: 'Conecte-se' },
+      'footer.builtWith': {
+        en: 'Built with Astro, React, and Tailwind CSS.',
+        pt: 'Feito com Astro, React e Tailwind CSS.',
+      },
+      'nav.about': { en: 'About', pt: 'Sobre' },
+      'nav.skills': { en: 'Skills', pt: 'Skills' },
+      'nav.experience': { en: 'Experience', pt: 'Experiência' },
+      'nav.projects': { en: 'Projects', pt: 'Projetos' },
+      'nav.contact': { en: 'Contact', pt: 'Contato' },
+    }
+
+    function applyPageLang(lang: string) {
+      document.querySelectorAll<HTMLElement>('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n!
+        if (pageI18n[key]) {
+          el.textContent = pageI18n[key][lang] ?? pageI18n[key]['en']
+        }
+      })
+    }
+
+    // Apply on load
+    const initialLang = localStorage.getItem('lang') ?? 'en'
+    applyPageLang(initialLang)
+
+    // React to Header toggle
+    window.addEventListener('languageChange', (e) => {
+      const lang = (e as CustomEvent<string>).detail
+      applyPageLang(lang)
     })
   </script>
 </BaseLayout>
